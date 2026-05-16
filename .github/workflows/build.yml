@@ -1,6 +1,40 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*.*.*']
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@6b44d33db2f4bad7d98e475e6f7968493b05af73
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Rename uf2 files with tag
+        run: |
+          cd firmware
+          for f in *.uf2; do
+            mv "$f" "${f%.uf2}-${GITHUB_REF_NAME}.uf2"
+          done
+          ls -la
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: firmware/*.uf2
+          generate_release_notes: true
+          fail_on_unmatched_files: true
