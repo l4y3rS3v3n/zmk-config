@@ -25,7 +25,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W  &kp E  &kp R  &kp V       &trans  &trans   &trans  &trans  &trans  &trans
    &kp TAB   &kp A &kp S  &kp D  &kp F  &kp T        &trans  &trans   &trans  &trans  &trans  &trans
-   &kp SPC &kp C &kp N2 &kp N1                      &trans  &trans       &trans  &trans   &trans  &trans  &trans  &trans
+   &kp SPC &kp C   &trans &kp N2 &kp N1  &trans       &trans  &trans   &trans  &trans  &trans  &trans
                           &kp G  &kp I  &kp LCTRL                      &trans  &trans  &trans
                         >;
                 };
