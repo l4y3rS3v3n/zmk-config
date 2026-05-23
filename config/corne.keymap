@@ -17,16 +17,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3  |  4  |  5  |   |    |     |    |    |    |    |
-// |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |    |     |    |    |    |    |
-// |  SPC  |  A  |  S  |  D  |  F  |  F1 |   |    |     |    |    |    |    |
-//                   |  G  | I  | ESC |  |   |    |     |
+// |  ESC    |  Q  |  W  |  E   |  R  |  V  |    |   |     |     |    |    |    |
+// |  TAB    |  A  |  S  |  D   |  F  |  T  |    |   |     |     |    |    |    |
+// |  LCTRL  |  C  |  2  |  1   |     |     |    |   |     |     |    |    |    |
+//                   |  G  | I  | SPC |             |   |     |     |
 
                         bindings = <
-   &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &trans  &trans   &trans  &trans  &trans  &trans
-   &kp TAB &kp Q &kp W &kp E &kp R &kp T        &trans  &trans   &trans  &trans  &trans  &trans
-   &kp SPC &kp A &kp S &kp D &kp F &kp F1       &trans  &trans   &trans  &trans  &trans  &trans
-                 &kp G &kp I &kp ESC   &trans  &trans  &trans
+   &kp ESC   &kp Q &kp W  &kp E  &kp R  &kp V       &trans  &trans   &trans  &trans  &trans  &trans
+   &kp TAB   &kp A &kp S  &kp D  &kp F  &kp T        &trans  &trans   &trans  &trans  &trans  &trans
+   &kp LCTRL &kp C &kp N2 &kp N1                      &trans  &trans       &trans  &trans   &trans  &trans  &trans  &trans
+                          &kp G  &kp I  &kp SPC                      &trans  &trans  &trans
                         >;
                 };
 
