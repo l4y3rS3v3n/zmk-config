@@ -19,14 +19,14 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC    |  Q  |  W  |  E   |  R  |  V  |    |   |     |     |    |    |    |
 // |  TAB    |  A  |  S  |  D   |  F  |  T  |    |   |     |     |    |    |    |
-// |  LCTRL  |  C  |  2  |  1   |     |     |    |   |     |     |    |    |    |
-//                   |  G  | I  | SPC |             |   |     |     |
+// |  SPC  |  C  |  2  |  1   |     |     |    |   |     |     |    |    |    |
+//                   |  G  | I  | LCTRL |             |   |     |     |
 
                         bindings = <
    &kp ESC   &kp Q &kp W  &kp E  &kp R  &kp V       &trans  &trans   &trans  &trans  &trans  &trans
    &kp TAB   &kp A &kp S  &kp D  &kp F  &kp T        &trans  &trans   &trans  &trans  &trans  &trans
-   &kp LCTRL &kp C &kp N2 &kp N1                      &trans  &trans       &trans  &trans   &trans  &trans  &trans  &trans
-                          &kp G  &kp I  &kp SPC                      &trans  &trans  &trans
+   &kp SPC &kp C &kp N2 &kp N1                      &trans  &trans       &trans  &trans   &trans  &trans  &trans  &trans
+                          &kp G  &kp I  &kp LCTRL                      &trans  &trans  &trans
                         >;
                 };
 
