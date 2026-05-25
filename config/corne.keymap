@@ -1,13 +1,7 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
+ *
  * SPDX-License-Identifier: MIT
- *
- * Keymap otimizado para desenvolvimento de software
- *
- * L0  Base QWERTY        — RWIN → RCTRL
- * L1  Símbolos + Fn      — (){}[]=-_+\|<> agrupados; F1-F13 + mídia
- * L2  Numpad + Navegação — numpad esquerdo; setas + Ctrl+←/→ + PG/HOME/END direito
- * L3  Sistema            — BT esquerdo; janelas/abas direito
  */
 
 #include <behaviors.dtsi>
@@ -28,7 +22,7 @@
 // └─────────┴─────┴─────┴──┬──┴──┬──┴──┬──┘   └──┬──┴──┬──┴──┬──┴─────┴─────┴────────┘
 //                          │LCTRL│ MO1 │SPC│   │ENT│ MO2 │RALT│
 //                          └─────┴─────┴───┘   └───┴─────┴────┘
-            bindings =
+            bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
@@ -47,7 +41,7 @@
 // └───────┴─────┴─────┴──┬──┴──┬──┴──┬──┘   └──┬───┴──┬──┴──┬──┴─────┴─────┴─────┘
 //                        │LALT │     │SPC│   │RET│ MO3 │RALT│
 //                        └─────┴─────┴───┘   └───┴─────┴────┘
-            bindings =
+            bindings = <
    &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4 &kp F5   &kp C_VOL_UP &kp LPAR  &kp RPAR  &kp LBRC  &kp RBRC &kp DELETE
    &kp BSPC   &kp F6  &kp F7  &kp F8  &kp F9 &kp F10  &kp C_VOL_DN &kp LBKT  &kp RBKT  &kp EQUAL &kp BSLH &kp PIPE
    &kp LSHFT  &kp F11 &kp F12 &kp F13 &trans &mo 3    &kp C_MUTE   &kp MINUS &kp UNDER &kp PLUS  &kp LT   &kp GT
@@ -66,7 +60,7 @@
 // └───────┴─────┴─────┴──┬──┴──┬──┴──┬──┘   └──┬──┴──────┴──┬───┴───────┴───────┴────────┘
 //                        │LCTRL│  0  │SPC│   │ENT│     │RALT│
 //                        └─────┴─────┴───┘   └───┴─────┴────┘
-            bindings =
+            bindings = <
    &kp ESC   &kp N7 &kp N8 &kp N9 &kp STAR  &kp FSLH   &trans &kp HOME     &kp UP   &kp END       &kp INS   &kp PSCRN
    &kp TAB   &kp N4 &kp N5 &kp N6 &kp MINUS &kp PLUS   &trans &kp LEFT     &kp DOWN &kp RIGHT     &kp PG_UP &kp DELETE
    &kp LSHFT &kp N1 &kp N2 &kp N3 &kp DOT   &mo 3      &trans &kp LC(LEFT) &trans   &kp LC(RIGHT) &kp PG_DN &trans
@@ -85,7 +79,7 @@
 // └────────┴──────┴──────┴──┬───┴──┬───┴──┬───┘   └──┬──┴─────────┴──┬───────┴──────────┴─────┴──────┘
 //                           │LCTRL │     │SPC│    │ENT│      │RALT│
 //                           └──────┴─────┴───┘    └───┴──────┴────┘
-            bindings =
+            bindings = <
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans          &kp LA(LS(TAB)) &trans      &trans &kp C_AL_CALC
    &trans     &trans       &trans       &trans       &trans       &trans            &trans &kp LC(LS(TAB)) &kp LA(TAB)     &kp LC(TAB) &trans &trans
    &trans     &trans       &trans       &trans       &trans       &trans            &trans &trans          &trans          &trans      &trans &trans
